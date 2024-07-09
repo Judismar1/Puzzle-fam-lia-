@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id=forPuzzle></div>
+<ul id="menu">
+  <li>&#x2630;</li>
+  <li>Imagem padrão</li>
+  <li>Carregar imagem</li>
+  <li>Tipo da peça: <select id="shape">
+      <option value="1" selected>Clássico</option>
+      <option value="2">Triângulo</option>
+      <option value="3">Redondo</option>
+      <option value="4">Pedaços</option>
+    </select></li>
+  <li>12 Peças</li>
+  <li>25 Peças</li>
+  <li><button>JOGAR</button></li>
+  <li>
+    <audio style="background-color: #50c87881;" id="myAudio" controls autoplay onended="playNext()" loop>
+        <source src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
+    </audio>
+</li>
+</ul>
+<script>
+    const audioPlayer = document.getElementById('myAudio');
+    const sources = [
+        'pagode.mp3',
+        'brasil.mp3',
+        'brasilero_do_brasil.mp3'
+    ];
+    let currentSourceIndex = 0;
+
+    function playNext() {
+        currentSourceIndex = (currentSourceIndex + 1) % sources.length;
+        audioPlayer.src = sources[currentSourceIndex];
+        audioPlayer.play();
+    }
+
+    audioPlayer.addEventListener('ended', playNext);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
