@@ -20,14 +20,13 @@
     </select></li>
   <li>12 Peças</li>
   <li>25 Peças</li>
-  <li><button>JOGAR</button></li>
-  <li>
-    <button id="toggleAudio">Desligar Som</button>
-    <button id="nextSong">Próxima Música</button>
+  <div>
+    <button class="cor" id="toggleAudio">Desligar Som</button>
+    <button class="cor" id="nextSong">Próxima Música</button>
     <audio id="myAudio" autoplay>
         <source id="audioSource" src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
     </audio>
-</li>
+  </div>
 </ul>
 <script>
     const audioPlayer = document.getElementById('myAudio');
