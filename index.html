@@ -25,7 +25,7 @@
     <button class="cor" id="nextSong">Próxima Música</button>
     <audio id="myAudio" autoplay>
         <source id="audioSource" src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
-        <source id="audioSource" src="Perdição - L7NNON.mp3" type="audio/mpeg">
+        <source src="Perdição - L7NNON.mp3" type="audio/mpeg">
     </audio>
   </div>
 </ul>
@@ -36,7 +36,7 @@
     const nextSongButton = document.getElementById('nextSong');
     const sources = [
         'Ana Vilela - Trem-Bala ( letra ).mp3',
-        'Perdição - L7NNON.mp3'
+        'Perdição - L7NNON.mp3'
     ];
     let currentSourceIndex = 0;
     let isPlaying = true;
