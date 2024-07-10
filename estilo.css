@@ -10,7 +10,7 @@ body {
   #menu {
     position: relative;
     list-style-type: none;
-    padding-left: 19px;
+    padding-left: 5px;
     z-index: 1000;
     /* 1 */
     display: inline-block;
