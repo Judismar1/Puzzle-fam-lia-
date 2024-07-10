@@ -1152,7 +1152,7 @@
     } //  // scope for loadFile
 
     function loadInitialFile() {
-      puzzle.srcImage.src = "/familia.png";
+      puzzle.srcImage.src = "/images/img5.JPG";
     }
     
     //-----------------------------------------------------------------------------

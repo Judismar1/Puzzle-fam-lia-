@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
-    background-color: #98FB98;
+    background-color:rgba(0, 0, 0, 0.87);
     margin: 0;
     padding: 0;
     border-width: 0;
@@ -21,11 +21,12 @@ body {
     margin: 2px;
     padding: 4px 10px;
     border-radius: 5px;
-    background-color: #8cb600a4    ;
+    background-color: #3e6bffa4;
+    color: rgb(250, 250, 250);
   }
 
   #menu li:hover {
-    background-color: #50c87881;
+    background-color: rgba(255, 255, 255, 0.487);
   }
 
   #forPuzzle {
@@ -35,7 +36,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #8080000d;
+    background-color: rgba(247, 251, 247, 0.515);
     overflow: hidden;
   }
 

@@ -22,29 +22,50 @@
   <li>25 Peças</li>
   <li><button>JOGAR</button></li>
   <li>
-    <audio style="background-color: #50c87881;" id="myAudio" controls autoplay onended="playNext()" loop>
-        <source src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
+    <button id="toggleAudio">Desligar Som</button>
+    <button id="nextSong">Próxima Música</button>
+    <audio id="myAudio" autoplay>
+        <source id="audioSource" src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
     </audio>
 </li>
 </ul>
 <script>
     const audioPlayer = document.getElementById('myAudio');
+    const audioSource = document.getElementById('audioSource');
+    const toggleAudioButton = document.getElementById('toggleAudio');
+    const nextSongButton = document.getElementById('nextSong');
     const sources = [
-        'pagode.mp3',
-        'brasil.mp3',
-        'brasilero_do_brasil.mp3'
+        'Ana Vilela - Trem-Bala ( letra ).mp3',
+        'Perdição - L7NNON.mp3'
     ];
     let currentSourceIndex = 0;
+    let isPlaying = true;
+
+    // Set volume to 50%
+    audioPlayer.volume = 0.5;
 
     function playNext() {
         currentSourceIndex = (currentSourceIndex + 1) % sources.length;
-        audioPlayer.src = sources[currentSourceIndex];
+        audioSource.src = sources[currentSourceIndex];
+        audioPlayer.load();
         audioPlayer.play();
     }
+
+    toggleAudioButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audioPlayer.pause();
+            toggleAudioButton.textContent = 'Ligar Som';
+        } else {
+            audioPlayer.play();
+            toggleAudioButton.textContent = 'Desligar Som';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    nextSongButton.addEventListener('click', playNext);
 
     audioPlayer.addEventListener('ended', playNext);
 </script>
 <script src="script.js"></script>
 </body>
 </html>
-
