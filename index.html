@@ -21,7 +21,7 @@
   <li>12 Peças</li>
   <li>25 Peças</li>
   <div>
-    <button class="cor" id="toggleAudio">Desligar Som</button>
+    <button class="cor" id="toggleAudio">Música</button>
     <button class="cor" id="nextSong">Próxima Música</button>
     <audio id="myAudio" autoplay>
         <source id="audioSource" src="Ana Vilela - Trem-Bala ( letra ).mp3" type="audio/mpeg">
@@ -54,10 +54,10 @@
     toggleAudioButton.addEventListener('click', () => {
         if (isPlaying) {
             audioPlayer.pause();
-            toggleAudioButton.textContent = 'Ligar Som';
+            toggleAudioButton.textContent = 'Ativar';
         } else {
             audioPlayer.play();
-            toggleAudioButton.textContent = 'Desligar Som';
+            toggleAudioButton.textContent = 'Desativar';
         }
         isPlaying = !isPlaying;
     });
